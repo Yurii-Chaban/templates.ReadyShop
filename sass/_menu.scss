@@ -1,0 +1,241 @@
+
+$color-background: #F5F5F5;
+$color-main: rgba(0,12,21, 0.65);
+$color-active: #000;
+$color-link: #4f4f4f;
+
+$button-height: 15px;
+$button-width: 38px;
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin:  0 auto;
+  font-family: 'Roboto', sans-serif;
+
+  p {
+    font-size: 14px;
+  }
+  
+  a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: $color-main;
+    text-decoration: none;
+    font-size: 27px;
+    overflow: hidden;
+    top: 5px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      background: $color-main;
+      height: 2px;
+      width: 0%;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+      transition: .35s ease;
+    }
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+      width: 100%;
+    }
+  }
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+}
+
+.button_container {
+  position: absolute;
+  top: 10px;
+  right: 4%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  
+  &:hover {
+    opacity: .7;
+  }
+  
+  &.active {
+    // width: 24px;
+    // height: 24px;
+    // .top {
+    //   transform: translateY(8px) translateX(0) rotate(45deg);
+    //   background: $color-active;
+    // }
+    // .middle {
+    //   opacity: 0;
+    //   background: $color-active;
+    // }
+    
+    // .bottom {
+    //   transform: translateY(-8px) translateX(0) rotate(-45deg);
+    //   background: $color-active;
+    // }
+    .top,
+    .middle,
+    .bottom {
+      background: #c76666;
+    }
+  }
+  
+  span {
+    background: $color-link;
+    border: none;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
+    
+    &:nth-of-type(2) {
+      top: 6px;
+    }
+    
+    &:nth-of-type(3) {
+      top: 12px;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(238, 238, 238, 0.85);
+  top: -44px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  z-index: 9;
+  // opacity: 0;
+  // visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  .desctop {
+    display: none;
+  }
+  
+  &.open {
+    // opacity: .65;
+    // visibility: visible;
+    height: 100%;
+    height: auto;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 35px;
+      top: 44px;
+      left: 0;
+      background: #d9d9d9;
+      z-index: 2;
+    }
+    
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+      
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    float: right;
+    width: 281px;
+    height: 480px;
+    padding: 40px 0 20px;
+    position: relative;
+    top: 44px;
+    right: 0;
+    background-color: #eee;
+    border-radius: 0;
+  }
+  ul {
+    float: right;
+    width: 220px;
+    list-style: none;
+    padding: 0;
+    margin: 0 28px 0 0;
+    display: inline-block;
+    position: relative;
+    height: auto; 
+    text-align: right;
+    
+    li {
+      display: block;
+      min-height: 20px;
+      position: relative;
+      text-align: right;
+      opacity: 0;
+      
+      a {
+        display: block;
+        position: relative;
+        font: 300 18px / 38px $MyriadPro;
+        color: #505050;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover {
+          color: #ce4545;
+        }
+        
+      }
+      a.desctop-menu-active {
+        color: #ce4545;
+      }
+    }
+  }
+  .mobile-services {
+    li {
+      a {
+        font: 700 26px / 39px $Arial;
+        color: #c76666;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .mobile-main-menu {
+    margin-top: 40px;
+    li {
+      a {
+        color: #454545;
+        font: 700 22px / 32px $Arial;
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

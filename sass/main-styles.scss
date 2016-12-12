@@ -1,0 +1,222 @@
+
+@import "compass/reset";
+
+/*INCLUDE FONTS*/ 
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.eot');
+	src: url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.woff2') format('woff2'),
+	url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.woff') format('woff'),
+	url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.ttf') format('truetype'),
+	url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.svg#MyriadPro-Semibold') format('svg'),
+	url('../resources/MyriadPro/Semibold/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../resources/MyriadPro/Regular/MyriadPro-Regular.eot');
+	src: url('../resources/MyriadPro/Regular/MyriadPro-Regular.woff2') format('woff2'),
+	url('../resources/MyriadPro/Regular/MyriadPro-Regular.woff') format('woff'),
+	url('../resources/MyriadPro/Regular/MyriadPro-Regular.ttf') format('truetype'),
+	url('../resources/MyriadPro/Regular/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
+	url('../resources/MyriadPro/Regular/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../resources/Arial/Bold/Arial-Bold.eot');
+	src: url('../resources/Arial/Bold/Arial-Bold.woff2') format('woff2'),
+	url('../resources/Arial/Bold/Arial-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../resources/Arial/Bold/Arial-BoldMT.woff') format('woff'),
+	url('../resources/Arial/Bold/Arial-BoldMT.ttf') format('truetype'),
+	url('../resources/Arial/Bold/Arial-BoldMT.svg#Arial-BoldMT') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../resources/Arial/Regular/ArialMT.woff') format('woff'),
+	url('../resources/Arial/Regular/ArialMT.ttf') format('truetype'),
+	url('../resources/Arial/Regular/ArialMT.svg#ArialMT') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../resources/Arial/Regular/ArialRegular.eot');
+	src: url('../resources/Arial/Regular/ArialRegular.woff2') format('woff2'),
+	url('../resources/Arial/Regular/ArialRegular.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Swiss721BT';
+	src: url('../resources/Swis721BT/Roman/Swiss721BT-Roman.woff') format('woff'),
+	url('../resources/Swis721BT/Roman/Swiss721BT-Roman.ttf') format('truetype'),
+	url('../resources/Swis721BT/Roman/Swiss721BT-Roman.svg#Swiss721BT-Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Swiss721BT';
+	src: url('../resources/Swis721BT/Roman/TT0003M_.eot');
+	src: url('../resources/Swis721BT/Roman/TT0003M_.woff2') format('woff2'),
+	url('../resources/Swis721BT/Roman/TT0003M_.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTPro-ThEx';
+	src: url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.eot');
+	src: url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.woff2') format('woff2'),
+	url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.woff') format('woff'),
+	url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.ttf') format('truetype'),
+	url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.svg#HelveticaNeueLTPro-ThEx') format('svg'),
+	url('../resources/HelveticaNeueLTPro/HelveticaNeueLTPro-ThEx.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*END INCLUDE FONTS*/ 
+
+/*GENERAL STYLES*/
+
+body {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+}
+
+$Arial: 'Arial', sans-serif;
+$MyriadPro: 'MyriadPro', sans-serif;
+$Swiss721BT: 'Swiss721BT', sans-serif;
+$HelveticaNeueLTPro: 'HelveticaNeueLTPro', sans-serif;
+
+@mixin site-container {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	margin: auto;
+	background-size: contain;
+	background-position: center;
+}
+@mixin transition {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin direction {
+	@include site-container;
+	padding: 10px 0;
+	background-color: #5ca7dc;
+	.arrow-back {
+		float: left;
+	}
+	.direction-title {
+		margin: 0 auto;
+		text-align: center;
+		a {
+			color: white;
+			font: 400 15px / 22px $Swiss721BT;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+@mixin mapWrapper {
+	overflow:hidden;
+	padding-bottom: 10.25%;
+	position:relative;
+	height:0;
+	iframe{
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		position:absolute;
+	}
+	.map-overflow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		display: block;
+		cursor: pointer;
+	}
+}
+
+@mixin videoWrapper {
+	position: relative;
+	margin: 15px auto;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	max-width: 971px;
+	max-height: 527px;
+	overflow: hidden;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.wrapper {
+	max-width: 1030px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include border-box;
+	position: relative;
+}
+a {
+	text-decoration: none;
+}
+.direction {
+	@include direction;
+}
+
+.videoWrapper {
+	@include videoWrapper;
+}
+.mapWrapper {
+	@include mapWrapper;
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@import "header";
+@import "menu";
+@import "footer";
+@import "home-page";
+@import "media";
+
+/*END GENERAL STYLES*/

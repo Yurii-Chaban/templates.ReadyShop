@@ -1,0 +1,85 @@
+header  {
+	position: relative;
+	background-color: #efefef;
+
+	.logo {
+		margin: 0 auto 10px;
+		padding: 10px 0 0;
+		text-align: center;
+		width: 54px;
+		height: 56px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.shop-name {
+		margin: 0 auto 10px;
+		text-align: center;
+		color: #c76666;
+		font: 700 39px / 42px $Arial;
+		text-transform: uppercase;
+	}
+
+	.line {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		border-top: 1px solid #c5c5c5;
+	}
+
+	.navigation-block {
+		padding: 6px 0;
+		overflow: hidden;
+		background-color: #d7d7d7;
+	}
+
+	#search-form {
+		float: left;
+		max-width: 70%;
+		width: auto;
+	}
+
+	#search-field {
+		width: 30px;
+		box-sizing: border-box;
+		border: 2px solid transparent;
+		border-radius: 4px;
+		font-size: 16px;
+		background-color: inherit;
+		background-image: url("../images/search-icon.png");
+		background-position: 5px;
+		background-repeat: no-repeat;
+		padding: 5px 10px 5px 35px;
+		-webkit-transition: width 0.4s ease-in-out;
+		transition: width 0.4s ease-in-out;
+		outline: none;
+		cursor: pointer;
+
+		&:focus {
+			width: 100%;
+			border-color: #ccc;
+			background-color: #ccc;
+		}
+	}
+
+	.basket-wrapper {
+		float: right;
+
+		.item-count {
+			float: left;
+			margin: 4px 8px 0 0;
+			
+			a {
+				color: #535353;
+				font: 400 22px / 24px $Arial;
+			}
+		}
+		.basket-icon {
+			float: right;
+			margin: 2px 0 0 0;
+		}
+	}
+}
