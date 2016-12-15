@@ -269,7 +269,7 @@ header .navigation-block {
 /* line 39, ../sass/header.scss */
 header #search-form {
   float: left;
-  max-width: 70%;
+  max-width: 75%;
   width: auto;
 }
 /* line 45, ../sass/header.scss */
@@ -578,6 +578,243 @@ h1 {
 .type-nav .desctop-block {
   display: none;
 }
+/* line 46, ../sass/home-page.scss */
+.type-nav .under-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding-top: 26px;
+}
+/* line 55, ../sass/home-page.scss */
+.type-nav .under-content .navigation-menu {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 60, ../sass/home-page.scss */
+.type-nav .under-content .navigation-menu li {
+  display: block;
+  margin: 10px auto;
+  text-align: left;
+  padding: 20px 0 20px 25px;
+  background: rgba(0, 0, 0, 0.7);
+}
+/* line 67, ../sass/home-page.scss */
+.type-nav .under-content .navigation-menu li a {
+  color: white;
+  font: 600 30px/32px "MyriadPro", sans-serif;
+}
+/* line 73, ../sass/home-page.scss */
+.type-nav .under-content .navigation-menu .more-menu {
+  display: none;
+}
 
 /*END SECTION TYPE NAV*/
+/*SERVICES SECTION*/
+/* line 81, ../sass/home-page.scss */
+.services-section {
+  background: url("../images/special-offers-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-bottom: 7px solid #c66666;
+}
+/* line 87, ../sass/home-page.scss */
+.services-section .special-offers-desctop,
+.services-section .services-list,
+.services-section .list-of-qualities {
+  display: none;
+}
+/* line 94, ../sass/home-page.scss */
+.services-section .special-offers-section .title-block {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 11px 0;
+  text-align: center;
+  background: #fafafa;
+}
+/* line 102, ../sass/home-page.scss */
+.services-section .special-offers-section .title-block .title {
+  color: #c76666;
+  font: 700 25px/26px "Arial", sans-serif;
+}
+/* line 108, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider {
+  margin: 20px auto;
+}
+/* line 111, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider * {
+  outline: none;
+}
+/* line 115, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item {
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin-right: 20px;
+}
+/* line 122, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item:hover .img-wrapper .overflow-block {
+  display: block;
+}
+/* line 128, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper {
+  width: 227px;
+  height: 304px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 134, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper img {
+  width: auto;
+  height: 100%;
+}
+/* line 139, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86%;
+  z-index: 2;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/* line 150, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .hulf-block-bg {
+  float: left;
+  width: 60%;
+  height: 100%;
+  background: rgba(199, 102, 102, 0.8);
+}
+/* line 156, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .hulf-block-bg .view {
+  position: relative;
+  display: block;
+  width: 62px;
+  height: 100%;
+  float: right;
+  color: white;
+  font: 700 20px/22px "Arial", sans-serif;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+/* line 167, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .hulf-block-bg .view span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+/* line 174, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .hulf-block-bg .view:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 180, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .card-block {
+  float: right;
+  width: 40%;
+  height: 100%;
+  background: rgba(228, 228, 228, 0.8);
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/* line 188, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .card-block:hover {
+  background: rgba(204, 204, 204, 0.8);
+}
+/* line 191, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .card-block:hover a {
+  color: #fff;
+}
+/* line 196, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .overflow-block .card-block a {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  text-align: center;
+  transform: translateY(-50%);
+  color: #828282;
+  font: 400 18px/22px "Arial", sans-serif;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/* line 210, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .img-wrapper .item-title {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 0 14px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font: 700 13px/15px "Arial", sans-serif;
+}
+/* line 225, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .price-block {
+  margin: 0 auto;
+  padding: 8px 0 7px;
+  text-align: center;
+  background: #c66666;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+}
+/* line 234, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .price-block .dollar,
+.services-section .special-offers-section .special-offers-slider .slider-item .price-block .sub-price {
+  font-size: 11px;
+}
+/* line 239, ../sass/home-page.scss */
+.services-section .special-offers-section .special-offers-slider .slider-item .price-block .main-price {
+  font-size: 17px;
+}
+
+/*END SERVICES SECTION*/
+/*PREFFOTER SECTION*/
+/* line 249, ../sass/home-page.scss */
+.preffoter-section {
+  background: url("../images/preffoter-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+/* line 255, ../sass/home-page.scss */
+.preffoter-section .welcome-title {
+  margin: 27px auto 18px;
+  text-align: center;
+  color: #5a5a5a;
+  font: 700 30px/30px "Arial", sans-serif;
+}
+/* line 262, ../sass/home-page.scss */
+.preffoter-section p {
+  color: #5a5a5a;
+  font: 400 18px/22px "Arial", sans-serif;
+  text-align: justify;
+  word-break: break-word;
+}
+
+/*END PREFFOTER SECTION*/
 /*END GENERAL STYLES*/

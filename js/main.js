@@ -14,6 +14,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerPadding: '20px',
+		variableWidth: true,
 		responsive: [
 		{
 			breakpoint: 768,
@@ -29,7 +30,7 @@ $(document).ready(function() {
 			settings: {
 				arrows: true,
 				centerMode: true,
-				centerPadding: '0px',
+				centerPadding: '20px',
 				slidesToShow: 1
 			}
 		}
