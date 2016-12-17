@@ -6,7 +6,7 @@
 		position: relative;
 		width: 100%;
 		min-height: 100%;
-		height: 545px;
+		height: 530px;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -107,6 +107,7 @@
 
 		.special-offers-slider {
 			margin: 20px auto;
+			overflow: hidden;
 
 			* {
 				outline: none;
@@ -247,6 +248,7 @@
 /*END SERVICES SECTION*/
 /*PREFFOTER SECTION*/
 .preffoter-section {
+	position: relative;
 	background: url("../images/preffoter-bg.jpg") no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -260,10 +262,181 @@
 	}
 
 	p {
+		margin: 0 auto 20px;
 		color: #5a5a5a;
 		font: 400 18px / 22px $Arial;
 		text-align: justify;
 		word-break: break-word;
+	}
+
+	.position-block {
+		position: relative;
+		background: rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+
+		.footer-main-menu,
+		.footer-services-menu {
+			display: none;
+		}
+
+		.footer-main-menu,
+		.footer-services-menu,
+		.question-form {
+			@include border-box;
+
+			.block-title {
+				margin: 16px 0 14px;
+				color: #d0d0d0;
+				font: 400 22px / 25px $Arial;
+			}
+
+			#name,
+			#email,
+			#message-field {
+				@include border-box;
+				width: 100%;
+				margin: 0 auto;
+				background: rgba(255, 255, 255, 0.4);
+				outline: none;
+				resize: none;
+				border: none;
+
+				color: #e5e5e5;
+				font: 400 15px / 25px $Arial;
+			}
+
+			#name,
+			#email {
+				height: 33px;
+				padding: 0 0 0 9px;
+			}
+
+			#email {
+				margin: 7px auto;
+			}
+
+			#message-field {
+				height: 65px;
+				padding: 10px 0 0 9px;
+			}
+
+			#send-btn {
+				display: block;
+				margin: 22px auto 20px;
+				text-align: center;
+				color: #fff;
+				font: 700 18px / 25px $Arial;
+				text-transform: uppercase;
+
+				background: transparent;
+				border: none;
+				outline: none;
+				cursor: pointer;
+			}
+		}
+
+		.mobile-block {
+			padding: 11px 0 9px;
+			overflow: hidden;
+			background: rgba(199,102,102, 0.5);
+
+			
+
+			.social-icon-mobile {
+				margin: 8px auto 0;
+				overflow: hidden;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					margin: 8px 20px 0;
+					
+					.fa {
+						display: block;
+						color: #dedede;
+						font-size: 19px;
+						@include transition;
+					}
+
+					&:hover {
+						.fa {
+							color: #000;
+						}
+					}
+				}
+			}
+
+
+
+			/*For top btn*/
+
+			#go-top {
+				float: right;
+			}
+			.cd-top {
+				display: inline-block;
+				height: 38px;
+				width: 40px;
+				position: fixed;
+				bottom: 25px;
+				right: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+				overflow: hidden;
+				white-space: nowrap;
+				visibility: hidden;
+				opacity: 0;
+				text-align: center;
+				-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+				-moz-transition: opacity .3s 0s, visibility 0s .3s;
+				transition: opacity .3s 0s, visibility 0s .3s;
+			}
+			.cd-top .fa {
+				color: #fff;
+				font-size: 60px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+				-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+				-moz-transition: opacity .3s 0s, visibility 0s 0s;
+				transition: opacity .3s 0s, visibility 0s 0s;
+			}
+			.cd-top.cd-is-visible {
+				/* the button becomes visible */
+				visibility: visible;
+				opacity: 1;
+				z-index: 99999;
+			}
+			@media only screen and (min-width: 768px) {
+				.cd-top {
+					right: 20px;
+					bottom: 20px;
+				}
+
+				.cd-top .fa {
+					font-size: 70px;
+					line-height: 30px;
+				}
+			}
+			@media only screen and (min-width: 1024px) {
+				.cd-top {
+					height: 38px;
+					width: 49px;
+					right: 100px;
+					bottom: 60px;
+				}
+			}
+			.labels {
+				color: red;
+				background-color: transparent;
+				font-family: "Lucida Grande", "Arial", sans-serif;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+				width: 100px;
+				border: 0;
+			}
+		}
 	}
 }
 /*END PREFFOTER SECTION*/

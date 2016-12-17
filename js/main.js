@@ -1,3 +1,27 @@
+/*---For active menu item---*/
+$(function () {
+	$('.overlay-menu .desctop li a').each(function () {
+		var location = window.location.pathname;
+		var link = this.pathname;
+		var result = location.match(link);
+		if(result && link.length > 0) {
+			$(this).addClass('overlay-menu-item-active');
+		}
+	});
+});
+/*--------------------------*/
+$(function () {
+	$('.more-menu .submenu .submenu-list li a').each(function () {
+		var location = window.location.pathname;
+		var link = this.pathname;
+		var result = location.match(link);
+		if(result && link.length > 0) {
+			$(this).addClass('submenu-item-active');
+		}
+	});
+});
+/*--------------------------*/
+
 // DESCTOP MENU
 $('#toggle').click(function() {
 	$(this).toggleClass('active');
@@ -5,6 +29,8 @@ $('#toggle').click(function() {
 	$('#toggle').parents('.inside-page-header').css('padding: 0;')
 });
 
+
+// SLIDER
 $(document).ready(function() {
 	$('.special-offers-slider').slick({
 		// autoplay: true,
@@ -37,6 +63,8 @@ $(document).ready(function() {
 		]
 	});
 });
+
+
 //scroll to top
 jQuery(document).ready(function($){
     // browser window scroll (in pixels) after which the "back to top" link is shown
@@ -66,3 +94,29 @@ jQuery(document).ready(function($){
     });
 
   });
+
+/*for click on more button in menu*/
+$(document).ready(function () {
+	$(".more-menu").click(function() {
+
+		$(this).find(".submenu").toggleClass("visible");
+
+		$(this).toggleClass("active-toggle");
+
+
+		if($(".more-menu").find(".icon-more .fa").hasClass("fa-angle-right") ){
+
+			$(".icon-more .fa").removeClass('fa-angle-right').addClass('fa-angle-down');
+
+		}
+		else {
+
+			$(".icon-more .fa").removeClass('fa-angle-down').addClass('fa-angle-right');
+
+		}
+
+		$(".icon-more .fa").parent(".icon-more").toggleClass("more-active");
+
+	});
+
+});

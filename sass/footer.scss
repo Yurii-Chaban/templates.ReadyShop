@@ -1,0 +1,37 @@
+footer {
+	@include site-container;
+	padding: 0;
+	background-color: #c76666;
+
+
+	.copyright {
+		clear: both;
+		margin: 0 auto;
+		padding: 1px 0;
+		text-align: center;
+		@include border-box;
+		background-color: #c76666;
+		.copyright-sign {
+			margin: 0 auto;
+			color: #fff;
+			font: 400 12px / 22px $Arial;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:nth-of-type(2) {
+					font: 400 13px / 22px $HelveticaNeueLTPro;
+				}
+			}
+
+			span {
+				font-family: "Swiss721BT";
+				font-weight: 400;
+			}
+		}
+	}
+}
