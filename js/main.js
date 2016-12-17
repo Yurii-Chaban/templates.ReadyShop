@@ -32,6 +32,7 @@ $('#toggle').click(function() {
 
 // SLIDER
 $(document).ready(function() {
+
 	$('.special-offers-slider').slick({
 		// autoplay: true,
 		// autoplaySpeed: 3000,
@@ -62,6 +63,51 @@ $(document).ready(function() {
 		}
 		]
 	});
+
+	/*About page slider*/
+	$('.about-slider').slick({
+		// autoplay: true,
+		// autoplaySpeed: 3000,
+		infinite: true,
+		// speed: 1000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		centerPadding: '0',
+		nextArrow: '<div class="next-btn"><img src="images/more-next.png" alt="more prev"></div>',
+		prevArrow: '<div class="prev-btn"><img src="images/more-prev.png" alt="more next"></div>'
+	});
+
+	$('.related-product-slider').slick({
+		// autoplay: true,
+		// autoplaySpeed: 3000,
+		infinite: true,
+		// speed: 1000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		centerPadding: '20px',
+		variableWidth: true,
+		responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				arrows: false,
+				centerMode: true,
+				centerPadding: '20px',
+				slidesToShow: 1
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				arrows: true,
+				centerMode: true,
+				centerPadding: '20px',
+				slidesToShow: 1
+			}
+		}
+		]
+	});
+
 });
 
 
@@ -92,8 +138,7 @@ jQuery(document).ready(function($){
     	}, scroll_top_duration
     	);
     });
-
-  });
+});
 
 /*for click on more button in menu*/
 $(document).ready(function () {
@@ -118,5 +163,27 @@ $(document).ready(function () {
 		$(".icon-more .fa").parent(".icon-more").toggleClass("more-active");
 
 	});
-
 });
+
+// counter on page product
+$(document).ready(function() {
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+});
+// FOR DROPDOWN ACTIVE
+$(document).ready(function($) {
+	$('.ui.dropdown')
+	.dropdown();
+}); 

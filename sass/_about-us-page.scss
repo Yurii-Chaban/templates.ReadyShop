@@ -1,0 +1,121 @@
+.type-nav-about-page {
+	height: 140px;
+	overflow: hidden;
+	.full-img {
+		height: 280px;
+	}
+	.desctop-services-menu {
+		display: none;
+	}
+}
+.services-section{
+	&.services-section-about-page {
+		border: none;
+		padding: 0;
+	}
+}
+
+.about-page-preffoter {
+
+	background: url("../images/special-offers-bg.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.preffoter-content-bg {
+		max-width: 977px;
+		margin: 0 auto;
+		padding-top: 20px;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 35px;
+		background: rgba(0, 0, 0, 0.4);
+
+		.title {
+			margin: 20px 0 15px;
+			color: #fff;
+			font: 400 25px / 27px $Arial;
+		}
+
+		p {
+			margin: 0 0 15px 0;
+			text-align: justify;
+			color: #fff;
+			font: 400 18px / 22px $Arial;
+
+			&.desctop {
+				display: none;
+			}
+		}
+
+		.about-slider {
+			position: relative;
+			width: 100%;
+			max-width: 460px;
+			margin: 0 auto;
+			overflow: hidden;
+			@include border-box;
+
+			.prev-btn,
+			.next-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 2;
+				background: rgba(199,102,102, 0.8);
+				cursor: pointer;
+
+				img {
+					width: 30px;
+					height: 60px;
+				}
+			}
+			.prev-btn {
+				left: 0;
+			}
+			.next-btn {
+				right: 0;
+			}
+
+			.slick-slide {
+				.slide-wrapper {
+					width: 100%;
+					position: relative;
+					height: 285px;
+					overflow: hidden;
+					position: relative;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					-webkit-align-items: center;
+					align-items: center;
+
+					img {
+						display: block;
+						width: auto;
+						height: 100%;
+						margin: 0 auto;
+						text-align: center;
+						min-height: auto;
+						height: 100%;
+						min-width: auto;
+						max-width: none;
+						width: auto;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+					}
+				}
+			}
+		}
+	}
+}

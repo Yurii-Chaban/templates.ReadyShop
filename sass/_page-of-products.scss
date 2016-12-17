@@ -1,0 +1,190 @@
+.type-nav-product-page {
+	height: 140px;
+	overflow: hidden;
+
+	.full-img {
+		height: 600px;
+	}
+	.under-content {
+		display: none;
+	}
+}
+
+.page-of-products {
+	border: none;
+	padding: 0;
+
+	.special-offers-desctop {
+		display: block;
+		overflow: hidden;
+
+		.wrapper {
+			max-width: 100%;
+			padding: 0;
+		}
+
+		.special-offers-list {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -moz-flex;
+			display: -webkit-flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-between;
+			margin: 2px auto 0;
+			text-align: center;
+			@include border-box;
+			overflow: hidden;
+
+			li {
+				position: relative;
+				@include transition;
+				margin: 2px 0;
+
+				&:nth-child(n+9) {
+					display: none;
+				}
+
+				&:hover {
+					.img-wrapper {
+						.overflow-block {
+							display: block;
+						}
+					}
+				}
+
+				.img-wrapper {
+					width: 158px;
+					height: 211px;
+					position: relative;
+					overflow: hidden;
+
+					img {
+						width: auto;
+						height: 100%;
+						display: block;
+						margin: 0 auto;
+						text-align: center;
+					}
+
+					.overflow-block {
+						display: none;
+						position: absolute;
+						overflow: hidden;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 79.5%;
+						z-index: 2;
+						@include transition;
+
+						.hulf-block-bg {
+							float: left;
+							width: 60%;
+							height: 100%;
+							background: rgba(199,102,102, 0.8);
+
+							.view {
+								position: relative;
+								display: block;
+								width: 62px;
+								height: 100%;
+								float: right;
+								color: white;
+								font: 700 20px / 22px $Arial;
+								@include transition;
+								cursor: pointer;
+
+								span {
+									position: absolute;
+									top: 50%;
+									right: 10px;
+									transform: translateY(-50%);
+								}
+
+								&:hover {
+									background: rgba(0, 0, 0, 0.3);
+								}
+							}
+						}
+
+						.card-block {
+							float: right;
+							width: 40%;
+							height: 100%;
+							background: rgba(228,228,228, 0.8);
+							position: relative;
+							@include transition;
+
+							&:hover {
+								background: rgba(204,204,204, 0.8);
+
+								a {
+									color: #fff;
+								}
+							}
+
+							a {
+								position: absolute;
+								top: 50%;
+								right: 0;
+								display: block;
+								width: 100%;
+								text-align: center;
+								transform: translateY(-50%);
+								color: #828282;
+								font: 400 18px / 22px $Arial;
+								@include transition;
+							}
+						}
+
+					}
+
+					.item-title {
+						width: 100%;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						padding: 15px 1px 14px;
+						background: rgba(0, 0, 0, 0.6);
+						text-align: center;
+						margin: 0 auto;
+
+						color: white;
+						font: 700 11px / 15px $Arial;
+					}
+				}
+
+				.price-block {
+					margin: 0 auto;
+					padding: 8px 0 7px;
+					text-align: center;
+					background: #c66666;
+					color: #fff;
+					font-family: "Arial", sans-serif;
+					font-weight: 400;
+
+					.dollar,
+					.sub-price {
+						font-size: 11px;
+					}
+
+					.main-price {
+						font-size: 17px;
+					}
+				}
+			}
+		}
+
+		.more-btn {
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			color: #fff;
+			font: 700 18px / 22px $Arial;
+			text-transform: uppercase;
+		}
+	}
+}

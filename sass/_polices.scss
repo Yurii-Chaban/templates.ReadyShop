@@ -1,0 +1,48 @@
+.type-nav-polices {
+	height: 140px;
+	overflow: hidden;
+	.full-img {
+		height: 280px;
+	}
+	.desctop-services-menu {
+		display: none;
+	}
+}
+.services-section{
+	&.services-section-polices {
+		border: none;
+		padding: 0;
+	}
+}
+
+.polices-preffoter {
+	background: url("../images/special-offers-bg.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.preffoter-content-bg {
+		max-width: 977px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 35px;
+		background: rgba(0, 0, 0, 0.4);
+
+		.title {
+			margin: 20px 0 15px;
+			color: #fff;
+			font: 400 25px / 27px $Arial;
+		}
+
+		p {
+			margin: 0 0 15px 0;
+			text-align: justify;
+			color: #fff;
+			font: 400 18px / 22px $Arial;
+
+			&.desctop {
+				display: none;
+			}
+		}
+	}
+}
