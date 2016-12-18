@@ -151,7 +151,7 @@ $HelveticaNeueLTPro: 'HelveticaNeueLTPro', sans-serif;
 
 @mixin mapWrapper {
 	overflow:hidden;
-	padding-bottom: 10.25%;
+	padding-bottom: 56%;
 	position:relative;
 	height:0;
 	iframe{
@@ -210,6 +210,37 @@ a {
 }
 .mapWrapper {
 	@include mapWrapper;
+	border-top: 7px solid #c76666;
+	#mapWrapper {
+		min-height: 755px;
+		height: 100%;
+		width: 100%;
+		min-width: 500px;
+	}
+	.gm-style-iw * {
+		display: block;
+		width: 100%;
+	}
+	.gm-style-iw h4, .gm-style-iw p {
+		margin: 0;
+		padding: 0;
+	}
+	.gm-style-iw a {
+		color: #4272db;
+	}
+}
+.lb-data .lb-details {
+	display: none;
+}
+.map-marker-label {
+	position: absolute;
+	left: 60%;
+	top: 195px;
+	transform: translate(-50%, -50%);
+	color: #c76666;
+	font: 700 25px / 27px $Arial;
+	cursor: pointer;
+	z-index: 99999;
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -222,6 +253,7 @@ a {
 @import "about-us-page";
 @import "single-page-of-products";
 @import "cart";
+@import "contact-us-page";
 @import "media";
 
 /*END GENERAL STYLES*/

@@ -45,6 +45,11 @@
 			height: 530px;
 		}
 	}
+	.type-nav-contact-us {
+		.full-img {
+			height: 530px;
+		}
+	}
 
 	.page-of-products {
 		.special-offers-desctop {
@@ -311,6 +316,7 @@
 					background: transparent;
 
 					a {
+						position: relative;
 						display: block;
 						width: 100%;
 						height: 100%;
@@ -321,9 +327,37 @@
 						@include transition;
 						@include border-box;
 
+						span {
+							position: relative;
+							z-index: 2;
+						}
+
+						&:before {
+							content: "";
+							position: absolute;
+							top: 0;
+							top: -25px;
+							width: 140px;
+							height: 100%;
+							display: none;
+							z-index: 0;
+							background: -prefix-linear-gradient(left, rgba(255,255,255,0.9),
+								rgba(255,255,255,0.003));
+
+							background: linear-gradient(to right, rgba(255,255,255,0.9),
+								rgba(255,255,255,0.003));
+							-webkit-filter: blur(20px);
+							-moz-filter: blur(20px);
+							-o-filter: blur(20px);
+							-ms-filter: blur(20px);
+							filter: blur(20px);
+						}
+
 						&:hover {
 							color: #c76666;
-							background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3) 100%);
+							&:before {
+								display: block;
+							}
 						}
 					}
 				}
@@ -934,7 +968,7 @@
 
 				#go-top {
 					margin: 0;
-					right: 13%;
+					right: 1%;
 					bottom: 40px;
 				}
 			}
@@ -1437,7 +1471,80 @@
 		}
 	}
 	/*------------------*/
+	/*contact us page*/
+	.type-nav-contact-us {
+		height: 340px;
+
+		.full-img {
+			height: 750px;
+		}
+		.desctop-services-menu {
+			display: block;
+		}
+	}
+	/*------------------*/
+	/*contact page */
+	.contact-us-preffoter {
+		.preffoter-content-bg {
+			margin: 44px auto 0;
+
+			.contact-block {
+				margin: 45px auto 50px;
+
+				.contact-row {
+					margin: 20px auto;
+				}
+			}
+
+			.map-direction-block {
+				display: none;
+			}
+
+			.mapWrapper {
+				display: block;
+				height: 755px;
+				padding-bottom: 0;
+			}
+
+			.position-block {
+				padding: 0;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				padding-bottom: 40px;
+				z-index: 99999999;
+
+				.question-form {
+					#name, 
+					#email,
+					#message-field {
+						background: rgba(255, 255, 255, 0.3);
+					}
+				}
+			}
+		}
+	}
+	/*-----------------*/
 }
+
+@media (min-width: 1200px) {
+	.preffoter-section {
+		.position-block {
+			.mobile-block {
+				#go-top {
+					right: 13%;
+				}
+			}
+		}
+	}
+	.type-nav-single-product-page {
+		.full-img {
+			height: 1520px;
+		}
+	}
+}
+
 
 
 @media (min-width: 1440px) {
@@ -1468,6 +1575,7 @@
 			height: 1600px;
 		}
 	}
+
 }
 
 @media (min-width: 1680px) {

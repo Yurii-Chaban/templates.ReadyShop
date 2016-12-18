@@ -34,10 +34,10 @@ $('#toggle').click(function() {
 $(document).ready(function() {
 
 	$('.special-offers-slider').slick({
-		// autoplay: true,
-		// autoplaySpeed: 3000,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		infinite: true,
-		// speed: 1000,
+		speed: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerPadding: '20px',
@@ -66,10 +66,10 @@ $(document).ready(function() {
 
 	/*About page slider*/
 	$('.about-slider').slick({
-		// autoplay: true,
-		// autoplaySpeed: 3000,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		infinite: true,
-		// speed: 1000,
+		speed: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerPadding: '0',
@@ -78,10 +78,10 @@ $(document).ready(function() {
 	});
 
 	$('.related-product-slider').slick({
-		// autoplay: true,
-		// autoplaySpeed: 3000,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		infinite: true,
-		// speed: 1000,
+		speed: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerPadding: '20px',

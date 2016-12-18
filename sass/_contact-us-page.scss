@@ -1,0 +1,111 @@
+.type-nav-contact-us {
+	height: 140px;
+	overflow: hidden;
+	.full-img {
+		height: 280px;
+	}
+	.desctop-services-menu {
+		display: none;
+	}
+}
+.services-section{
+	&.services-section-contact-us {
+		border: none;
+		padding: 0;
+	}
+}
+
+.contact-us-preffoter {
+	background: url("../images/special-offers-bg.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.preffoter-content-bg {
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 0;
+		background: rgba(0, 0, 0, 0.4);
+
+		.contact-block {
+			max-width: 630px;
+			margin: 37px auto 30px;
+
+			.contact-row {
+				overflow: hidden;
+				margin: 15px auto;
+
+				.img-wrapper {
+					float: left;
+					width: 31px;
+					height: 30px;
+					margin: 0 10px 0 0;
+					overflow: hidden;
+
+					img {
+						max-width: 100%;
+						height: auto;
+					}
+				}
+
+				.title {
+					overflow: hidden;
+					color: #fff;
+					font: 400 22px / 28px $Arial;
+
+					a {
+						color: #fff;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		.map-direction-block {
+			overflow: hidden;
+			margin: 0 auto 32px;
+			padding: 13px 0;
+			background: rgba(0, 0, 0, 0.4);
+			border-top: 1px solid rgba(255, 255, 255, 0.3);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -80px;
+				width: 140px;
+				height: 100%;
+				z-index: 0;
+				background: -prefix-linear-gradient(left, rgba(255,255,255,0.5),
+					rgba(255,255,255,0.003));
+
+				background: linear-gradient(to right, rgba(255,255,255,0.5),
+					rgba(255,255,255,0.003));
+				-webkit-filter: blur(20px);
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+				filter: blur(20px);
+
+			} 
+			.get-direction {
+				display: block;
+				float: right;
+				position: relative;
+				z-index: 3;
+				margin: 0 16px 0 0;
+				color: #fff;
+				font: 700 25px / 27px $Arial;
+				text-transform: uppercase;
+			}
+		}
+
+		.mapWrapper {
+			display: none;
+		}
+	}
+}
