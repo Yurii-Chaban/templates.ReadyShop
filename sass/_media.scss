@@ -560,7 +560,8 @@
 				flex-direction: row;
 				justify-content: center;
 				max-width: 1580px;
-				width: 1250px;
+				// width: 1250px;
+				width: auto;
 				margin: 0 auto;
 				text-align: center;
 				@include border-box;
