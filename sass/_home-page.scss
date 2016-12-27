@@ -168,8 +168,34 @@
 								span {
 									position: absolute;
 									top: 50%;
-									right: 10px;
+									right: 5px;
 									transform: translateY(-50%);
+									display: block;
+									width: 42px;
+									height: 34px;
+									padding-top: 8px;
+
+									img {
+										position: absolute;
+										z-index: 3;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%, -50%);
+										opacity: 0;
+										display: block;
+										padding-right: 12px;
+									}
+
+									&:hover {
+
+										span {
+											opacity: 0;
+										}
+
+										img {
+											opacity: 1;
+										}
+									}
 								}
 
 								&:hover {
@@ -203,6 +229,31 @@
 								color: #828282;
 								font: 400 18px / 22px $Arial;
 								@include transition;
+
+								span {
+
+									img {
+										position: absolute;
+										z-index: 3;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%, -50%);
+										opacity: 0;
+										width: 62px;
+										height: 54px;
+									}
+
+									&:hover {
+
+										& > span {
+											opacity: 0;
+										}
+
+										img {
+											opacity: 1;
+										}
+									}
+								}
 							}
 						}
 
@@ -317,7 +368,7 @@
 
 			#message-field {
 				height: 65px;
-				padding: 10px 0 0 9px;
+				padding: 0 0 0 9px;
 			}
 
 			#send-btn {

@@ -76,6 +76,12 @@ header  {
 				color: #535353;
 				font: 400 22px / 24px $Arial;
 			}
+
+			&.items-there {
+				a {
+					color: #c76666;
+				}
+			}
 		}
 		.basket-icon {
 			float: right;
