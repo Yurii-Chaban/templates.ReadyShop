@@ -3771,7 +3771,7 @@ footer .copyright .copyright-sign span {
   }
   /* line 748, ../sass/_media.scss */
   .services-section .services-list .list li:hover .black-bg {
-    animation: slide 0.9s linear;
+    animation: slide 0.01s linear;
     animation-fill-mode: forwards;
     animation-direction: reverse;
   }
@@ -3965,25 +3965,25 @@ footer .copyright .copyright-sign span {
   }
   /* line 945, ../sass/_media.scss */
   .services-section .special-offers-section .special-offers-desctop .special-offers-list li:hover .img-wrapper .overflow-block .hulf-block-bg {
-    animation: hulf-block-animation 1s linear;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    animation: hulf-block-animation 1.2s linear;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
     animation-direction: normal;
   }
   /* line 952, ../sass/_media.scss */
   .services-section .special-offers-section .special-offers-desctop .special-offers-list li:hover .img-wrapper .overflow-block .hulf-block-bg .view {
-    animation: hulf-block-animation 1s linear;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    animation: hulf-block-animation 1.2s linear;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
     animation-direction: normal;
   }
   /* line 961, ../sass/_media.scss */
   .services-section .special-offers-section .special-offers-desctop .special-offers-list li:hover .img-wrapper .overflow-block .card-block {
-    animation: card-block-animation 0.85s linear;
-    -webkit-animation-duration: 0.85s;
-    animation-duration: 0.85s;
+    animation: card-block-animation 1.1s linear;
+    -webkit-animation-duration: 1.1s;
+    animation-duration: 1.1s;
     animation-fill-mode: forwards;
     animation-direction: normal;
   }
