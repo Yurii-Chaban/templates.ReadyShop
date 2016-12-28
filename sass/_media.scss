@@ -652,6 +652,40 @@
 						}
 					}
 
+					/*-------------------------*/
+					@-webkit-keyframes slide {
+						0% {
+							left: -300px;
+						}
+						50% {
+							left: -170px;
+						}
+						100% {
+							left: 0;
+						}
+					}
+					@-moz-keyframes slide {
+						0% {
+							left: -300px;
+						}
+						50% {
+							left: -170px;
+						}
+						100% {
+							left: 0;
+						}
+					}
+					@-o-keyframes slide {
+						0% {
+							left: -300px;
+						}
+						50% {
+							left: -170px;
+						}
+						100% {
+							left: 0;
+						}
+					}
 					@keyframes slide {
 						0% {
 							left: -300px;
@@ -661,6 +695,41 @@
 						}
 						100% {
 							left: 0;
+						}
+					}
+					/*-------------------------*/
+					/*-------------------------*/
+					@-webkit-keyframes slide-back {
+						0% {
+							right: 300px;
+						}
+						50% {
+							right: 150px;
+						}
+						100% {
+							right: -300px;
+						}
+					}
+					@-moz-keyframes slide-back {
+						0% {
+							right: 300px;
+						}
+						50% {
+							right: 150px;
+						}
+						100% {
+							right: -300px;
+						}
+					}
+					@-o-keyframes slide-back {
+						0% {
+							right: 300px;
+						}
+						50% {
+							right: 150px;
+						}
+						100% {
+							right: -300px;
 						}
 					}
 					@keyframes slide-back {
@@ -678,14 +747,14 @@
 					&:hover {
 						.black-bg {
 							// display: none;
-							animation: slide 2s linear;
+							animation: slide 0.9s linear;
 							animation-fill-mode: forwards;
 							animation-direction: reverse;
 						}
 
 						.hover-block {
 							// display: block;
-							animation: slide 2s linear;
+							animation: slide 0.7s linear;
 							animation-fill-mode: forwards;
 							background: rgba(199,102,102, 0.8);
 						}
@@ -731,10 +800,171 @@
 							margin: 0 0 50px 0;
 						}
 
+						/*-------------------------*/
+						@-webkit-keyframes card-block-animation {
+							0% {
+								right: -100%;
+							}
+							50% {
+								right: -50%;
+							}
+							100% {
+								right: 0;
+							}
+						}
+						@-moz-keyframes card-block-animation {
+							0% {
+								right: -100%;
+							}
+							50% {
+								right: -50%;
+							}
+							100% {
+								right: 0;
+							}
+						}
+						@-o-keyframes card-block-animation {
+							0% {
+								right: -100%;
+							}
+							50% {
+								right: -50%;
+							}
+							100% {
+								right: 0;
+							}
+						}
+						@keyframes card-block-animation {
+							0% {
+								right: -100%;
+							}
+							50% {
+								right: -50%;
+							}
+							100% {
+								right: 0;
+							}
+						}
+						/*-------------------------*/
+						@-webkit-keyframes hulf-block-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 0;
+							}
+						}
+						@-moz-keyframes hulf-block-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 0;
+							}
+						}
+						@-o-keyframes hulf-block-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 0;
+							}
+						}
+						@keyframes hulf-block-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 0;
+							}
+						}
+						/*-------------------------*/
+
+						@-webkit-keyframes view-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 100%;
+							}
+						}
+						@-moz-keyframes view-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 100%;
+							}
+						}
+						@-o-keyframes view-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 100%;
+							}
+						}
+						@keyframes view-animation {
+							0% {
+								left: -100%;
+							}
+							50% {
+								left: -50%;
+							}
+							100% {
+								left: 100%;
+							}
+						}
+
 						&:hover {
 							.img-wrapper {
 								.overflow-block {
 									display: block;
+
+									.hulf-block-bg {
+										animation: hulf-block-animation 1s linear;
+										-webkit-animation-duration: 1s;
+										animation-duration: 1s;
+										animation-fill-mode: forwards;
+										animation-direction: normal;
+
+										.view {
+											animation: hulf-block-animation 1s linear;
+											-webkit-animation-duration: 1s;
+											animation-duration: 1s;
+											animation-fill-mode: forwards;
+											animation-direction: normal;
+										}
+									}
+
+									.card-block {
+										animation: card-block-animation 0.85s linear;
+										-webkit-animation-duration: 0.85s;
+										animation-duration: 0.85s;
+										animation-fill-mode: forwards;
+										animation-direction: normal;
+									}
 								}
 							}
 						}
@@ -768,15 +998,19 @@
 									float: left;
 									width: 60%;
 									height: 100%;
+									position: relative;
+									left: -100%;
 									background: rgba(199,102,102, 0.8);
 
 									.view {
 										position: relative;
 										display: block;
+										left: -100%;
 										width: 62px;
 										height: 100%;
 										float: right;
 										color: white;
+										background: rgba(0, 0, 0, 0.3);
 										font: 700 20px / 22px $Arial;
 										@include transition;
 										cursor: pointer;
@@ -817,12 +1051,6 @@
 												}
 											}
 										}
-
-										
-
-										&:hover {
-											background: rgba(0, 0, 0, 0.3);
-										}
 									}
 								}
 
@@ -832,6 +1060,7 @@
 									height: 100%;
 									background: rgba(228,228,228, 0.8);
 									position: relative;
+									right: -100%;
 									@include transition;
 
 									&:hover {
