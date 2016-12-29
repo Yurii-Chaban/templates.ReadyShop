@@ -3727,53 +3727,53 @@ footer .copyright .copyright-sign span {
   }
   @-webkit-keyframes slide-back {
     0% {
-      right: 300px;
+      opacity: 1;
     }
     50% {
-      right: 150px;
+      opacity: 0.5;
     }
     100% {
-      right: -300px;
+      opacity: 0;
     }
   }
   @-moz-keyframes slide-back {
     0% {
-      right: 300px;
+      opacity: 1;
     }
     50% {
-      right: 150px;
+      opacity: 0.5;
     }
     100% {
-      right: -300px;
+      opacity: 0;
     }
   }
   @-o-keyframes slide-back {
     0% {
-      right: 300px;
+      opacity: 1;
     }
     50% {
-      right: 150px;
+      opacity: 0.5;
     }
     100% {
-      right: -300px;
+      opacity: 0;
     }
   }
   @keyframes slide-back {
     0% {
-      right: 300px;
+      opacity: 1;
     }
     50% {
-      right: 150px;
+      opacity: 0.5;
     }
     100% {
-      right: -300px;
+      opacity: 0;
     }
   }
   /* line 748, ../sass/_media.scss */
   .services-section .services-list .list li:hover .black-bg {
-    animation: slide 0.01s linear;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
+    animation: slide-back 0.3s ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
   }
   /* line 755, ../sass/_media.scss */
   .services-section .services-list .list li:hover .hover-block {
