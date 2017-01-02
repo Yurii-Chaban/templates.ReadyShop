@@ -194,12 +194,32 @@
 @media (min-width: 1024px) {
 	/*Header*/
 	header {
+
+		.logo {
+			margin: 0 auto 5px;
+			padding: 7px 0 0 25px;
+		}
+
+		.shop-name {
+			margin: 0 auto 5px;
+			padding-left: 23px;
+			letter-spacing: -0.1px;
+		}
+
+		.navigation-block {
+			padding: 2px 0;
+		}
+
 		#search-form {
 			max-width: 100%;
-			width: 380px;
+			// margin-left: 31px;
+			// width: 365px;
+			width: 390px;
 
 			#search-field {
 				width: 130px;
+				padding: 5px 10px 5px 42px;
+				letter-spacing: 0.5px;
 
 				&:focus {
 					width: 100%;
@@ -207,8 +227,12 @@
 			}
 		}
 
+		.basket-wrapper {
+			margin-right: 7px;
+		}
+
 		.button_container {
-			right: 15px;
+			right: 26px;
 		}
 		.overlay {
 			background: none;
@@ -302,6 +326,9 @@
 
 		.full-img {
 			height: 1120px;
+			&.home-brand {
+				margin-top: -160px;
+			}
 		}
 
 		.desctop-services-menu {
@@ -337,6 +364,7 @@
 						cursor: pointer;
 						color: white;
 						font: 700 20px / 22px $MyriadPro;
+						letter-spacing: 2px;
 						@include transition;
 						@include border-box;
 
@@ -498,7 +526,7 @@
 			display: block;
 
 			.img-wrapper {
-				width: 145px;
+				width: 170px;
 				height: auto;
 				margin: 505px auto 0;
 				text-align: center;
@@ -560,6 +588,7 @@
 						float: left;
 						color: #535353;
 						font: 700 25px / 27px $Arial;
+						letter-spacing: 1px;
 					}
 				}
 			}
@@ -711,7 +740,7 @@
 						}
 					}
 					@-moz-keyframes slide-back {
-							0% {
+						0% {
 							opacity: 1;
 						}
 						50% {
@@ -722,7 +751,7 @@
 						}
 					}
 					@-o-keyframes slide-back {
-							0% {
+						0% {
 							opacity: 1;
 						}
 						50% {
@@ -733,7 +762,7 @@
 						}
 					}
 					@keyframes slide-back {
-							0% {
+						0% {
 							opacity: 1;
 						}
 						50% {
@@ -754,7 +783,14 @@
 
 						.hover-block {
 							// display: block;
-							animation: slide 0.7s linear;
+							animation: slide 0.7s linear; //disable
+							//enable
+							// animation: slide;
+							// -webkit-transition-timing-function: ease-in, linear, ease-in-out;
+							// -webkit-transition-duration: 0.5s, 0.7s, 0.5s;
+							// -webkit-transition-timing-function: ease-in, linear, ease-in-out;
+							// -webkit-transition-delay: 0, 0, 1s;
+
 							animation-fill-mode: forwards;
 							background: rgba(199,102,102, 0.8);
 						}
@@ -1378,7 +1414,7 @@
 	.about-page-preffoter {
 		.preffoter-content-bg {
 			margin: 45px auto 55px;
-			padding: 15px 5px 160px;
+			padding: 25px 5px 30px;
 
 			p {
 				&.mobile {
@@ -1388,6 +1424,8 @@
 				&.desctop {
 					display: block;
 				}
+				font-size: 20px;
+				line-height: 24px;
 			}
 		}
 	}
@@ -1395,7 +1433,6 @@
 	/*About page*/
 	.about-page-preffoter {
 		.preffoter-content-bg {
-			padding: 15px 5px 30px;
 			.mobile {
 				display: none;
 			}
@@ -1821,7 +1858,7 @@
 			margin: 44px auto 0;
 
 			.contact-block {
-				margin: 45px auto 50px;
+				margin: 45px 0 50px;
 
 				.contact-row {
 					margin: 20px auto;
@@ -1858,6 +1895,11 @@
 		}
 	}
 	/*-----------------*/
+	.preffoter-section {
+		p {
+			max-width: 950px;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1932,6 +1974,9 @@
 	.type-nav {
 		.full-img {
 			height: 1500px;
+			&.home-brand {
+				margin-top: -250px;
+			}
 		}
 	}
 
