@@ -78,7 +78,7 @@ $(document).ready(function() {
 	});
 
 	$('.related-product-slider').slick({
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 3000,
 		infinite: true,
 		speed: 1000,
