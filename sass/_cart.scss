@@ -20,10 +20,6 @@
   background-size: cover;
   background-position: center;
 
-  &.cart-preffoter-empty {
-    height: 100vh;
-  }
-
   .preffoter-content-bg {
     max-width: 977px;
     margin: 0 auto;
@@ -45,7 +41,7 @@
     }
 
     .empty-title {
-      margin: 40px auto;
+      margin: 0 auto;
       text-align: center;
       color: #c76666;
       font: 700 25px/26px "Arial", sans-serif;
