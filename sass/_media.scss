@@ -190,6 +190,44 @@
 		}
 	}
 
+	.snipping-cart-preffoter {
+		.navigation-btn-block {
+			.for-pay-with-paypal {
+				padding: 0;
+				.pay-pal-btn {
+					float: right;
+					margin: 10px 15px 10px 0;
+				}
+			}
+		}
+
+		.width-content {
+			.input-element {
+				width: 49%;
+				&.first-name,
+				&.country,
+				&.city,
+				&.zip,
+				&.email {
+					float: left;
+					clear: left;
+				}
+
+				&.last-name,
+				&.address,
+				&.state,
+				&.phone {
+					float: right;
+					clear: right;
+				}
+			}
+			.icon-wrapper {
+				float: right;
+				margin: 35px 35px 0 0;
+			}
+		}
+	}
+
 }
 @media (min-width: 1024px) {
 	/*Header*/
@@ -2031,6 +2069,30 @@
 			max-width: 950px;
 		}
 	}
+
+	.snipping-cart-preffoter {
+		.width-content {
+			.input-element {
+				max-width: 430px;
+				width: 100%;
+			}
+		}
+		.navigation-btn-block {
+			.for-pay-with-paypal {
+				padding: 0;
+				background: none;
+				border: 0;
+				.pay-pal-btn {
+					margin: 10px 35px 10px 0;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 @media (min-width: 1200px) {
