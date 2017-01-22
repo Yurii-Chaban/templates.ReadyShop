@@ -52,6 +52,10 @@
 		}
 
 		.single-product-slider {
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			color: rgba(0, 0, 0, 0);
 			.wrapper {
 				max-width: 100%;
 				padding: 0;
